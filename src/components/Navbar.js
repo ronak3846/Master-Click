@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
@@ -11,13 +12,16 @@ export default function Navbar() {
 
   return (
     <nav className="bg-black text-white fixed w-full z-50 shadow-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-1 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
         {/* Logo */}
         <Link href="/">
-          <img
+          <Image
             src="/images/mcplg.png"
             alt="Master Click Logo"
-            className="w-auto h-16"
+            width={120}
+            height={60}
+            className="h-16 w-auto"
+            priority
           />
         </Link>
 
@@ -31,7 +35,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
+          <button onClick={toggleMenu} aria-label="Toggle Menu">
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
@@ -39,7 +43,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black px-4 py-4 space-y-4">
+        <div className="md:hidden bg-black px-4 py-4 space-y-4 transform transition-transform duration-300">
           <Link href="/" onClick={toggleMenu}>
             Home
           </Link>
