@@ -11,9 +11,9 @@
 // export default function HomePage() {
 
 //   const heroImages = [
-//     { src: "/images/header1.JPG", alt: "Hero Image 1" },
-//     { src: "/images/header2.JPG", alt: "Hero Image 2" },
-//     { src: "/images/header3.JPG", alt: "Hero Image 3" },
+//     { src: "/images/header1.jpg", alt: "Hero Image 1" },
+//     { src: "/images/header2.jpg", alt: "Hero Image 2" },
+//     { src: "/images/header3.jpg", alt: "Hero Image 3" },
 //   ];
 
 //  const services = [
@@ -50,9 +50,9 @@
 
 
 //   const galleryImages = [
-//     { src: "/images/ph1.JPG", alt: "Gallery Photo 1" },
-//     { src: "/images/ph2.JPG", alt: "Gallery Photo 2" },
-//     { src: "/images/ph3.JPG", alt: "Gallery Photo 3" },
+//     { src: "/images/ph1.jpg", alt: "Gallery Photo 1" },
+//     { src: "/images/ph2.jpg", alt: "Gallery Photo 2" },
+//     { src: "/images/ph3.jpg", alt: "Gallery Photo 3" },
 //   ];
 
 //   return (
@@ -201,34 +201,34 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const heroImages = [
-  "/images/header1.JPG",
-  "/images/header2.JPG",
-  "/images/header3.JPG",
+  "/images/header1.jpg",
+  "/images/header2.jpg",
+  "/images/header3.jpg",
 ];
 
 const services = [
   {
-    image: "/images/ph5.JPG",
+    image: "/images/ph5.jpg",
     title: "Wedding Photography",
     description:
       "Capturing every precious moment with elegance and creativity.",
     whatsappMsg: "Hello, I'm interested in Wedding Photography services.",
   },
   {
-    image: "/images/ph6.JPG",
+    image: "/images/ph6.jpg",
     title: "Portraits & Headshots",
     description:
       "Professional portraits and headshots to elevate your profile.",
     whatsappMsg: "Hello, I'm interested in Portraits & Headshots.",
   },
   {
-    image: "/images/ph7.JPG",
+    image: "/images/ph7.jpg",
     title: "Event Coverage",
     description: "Comprehensive photography for events and functions.",
     whatsappMsg: "Hello, I'd like to enquire about Event Coverage services.",
   },
   {
-    image: "/images/ph8.JPG",
+    image: "/images/ph8.jpg",
     title: "Cinematography",
     description: "Cinematic video coverage capturing moments with emotion.",
     whatsappMsg: "Hello, I'm interested in Cinematography services.",
@@ -256,7 +256,7 @@ export default function HomePage() {
                   fill
                   priority
                   placeholder="blur"
-                  blurDataURL="/images/placeholder.JPG" // use an actual blurred placeholder image here
+                  blurDataURL="/images/placeholder.jpg" // use an actual blurred placeholder image here
                   className="object-cover"
                 />
               </div>
@@ -270,13 +270,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <img
+            <Image
               src="/images/mcp logo.png"
               alt="Ajay Vaishnav"
               width={288}
               height={288}
               placeholder="blur"
-              blurDataURL="/images/placeholder.JPG"
+              blurDataURL="/images/placeholder.jpg"
               className="rounded-full shadow-lg border-4 border-gold object-cover"
             />
           </div>
@@ -332,7 +332,7 @@ export default function HomePage() {
                   alt={service.title}
                   fill
                   placeholder="blur"
-                  blurDataURL="/images/placeholder.JPG"
+                  blurDataURL="/images/placeholder.jpg"
                   className="object-cover transform group-hover:scale-110 transition duration-700 ease-in-out"
                 />
               </div>
@@ -363,12 +363,12 @@ export default function HomePage() {
           {[1, 2, 3, 4, 5, 6].map((num) => (
             <div key={num} className="relative w-full h-60">
               <Image
-                src={`/images/ph${num}.JPG`}
+                src={`/images/ph${num}.jpg`}
                 alt={`Gallery ${num}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 placeholder="blur"
-                blurDataURL="/images/placeholder.JPG"
+                blurDataURL="/images/placeholder.jpg"
                 className="object-cover rounded-lg hover:scale-105 transition"
               />
             </div>
