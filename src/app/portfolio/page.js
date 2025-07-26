@@ -33,7 +33,7 @@ export default function PortfolioPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {photos.map((photo, index) => (
           <div key={index} className="overflow-hidden rounded-lg">
-            <Image
+            <img
               src={photo.src}
               alt={photo.alt}
               width={500}

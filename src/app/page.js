@@ -270,7 +270,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <Image
+            <img
               src="/images/mcp logo.png"
               alt="Ajay Vaishnav"
               width={288}
