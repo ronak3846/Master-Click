@@ -9,13 +9,13 @@ export default function AboutPage() {
 
       <div className="flex flex-col md:flex-row items-center gap-10">
         <Image
-          src="/images/your-photo.jpg" // replace with your actual photo
+          src="/images/your-photo.JPG" // replace with your actual photo
           alt="Your Name"
           width={192}
           height={192}
           className="rounded-full border-4 border-gold object-cover"
           placeholder="blur"
-          blurDataURL="/images/placeholder.jpg" // optional: blurred placeholder
+          blurDataURL="/images/placeholder.JPG" // optional: blurred placeholder
         />
 
         <div>
